@@ -69,19 +69,25 @@ body {
 				height: 16%;
 				outline: 0.4vh dotted black;
 
-				.menu {
+				.game_over_screen,
+				.start_game_screen {
 					position: absolute;
 					padding: 0.5vh;
 					width: 100%;
 					height: 100%;
-					display: none;
+					display: flex;
 					flex-flow: column nowrap;
 					justify-content: center;
 					align-items: center;
 					font-family: NokiaDisplay;
 					overflow: hidden;
 
-					.game_over {
+					&.game_over_screen {
+						display: none;
+					}
+
+					.game_over_text,
+					.game_title_text {
 						font-size: 1.9vh;
 						font-weight: 600;
 						text-align: center;
@@ -113,8 +119,9 @@ body {
 					}
 				}
 
-				/* #display_canvas {
-				} */
+				#display_canvas {
+					display: none;
+				}
 			}
 
 			.phone_svg {

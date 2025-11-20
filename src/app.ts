@@ -5,14 +5,16 @@ export default class App {
 	canvas: HTMLCanvasElement;
 	ctx: CanvasRenderingContext2D;
 	displayEl: HTMLDivElement;
-	menuEl: HTMLDivElement;
+	gameOverDiv: HTMLDivElement;
+	startGameDiv: HTMLDivElement;
 	scoreEl: HTMLHeadingElement;
 	MAX_FPS: number = 7;
 	FRAME_INTERVAL: number = 1000 / this.MAX_FPS;
 	then: number = 0;
 	accumulator: number = 0;
 
-	playing: boolean = true;
+	hadFirstStart: boolean = false;
+	playing: boolean = false;
 
 	GRID_W: number = 20;
 	GRID_H: number = 11;
@@ -29,7 +31,8 @@ export default class App {
 		this.canvas = canvas;
 		this.ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
 		this.displayEl = document.querySelector('.display') as HTMLDivElement;
-		this.menuEl = document.querySelector('.menu') as HTMLDivElement;
+		this.gameOverDiv = document.querySelector('.game_over_screen') as HTMLDivElement;
+		this.startGameDiv = document.querySelector('.start_game_screen') as HTMLDivElement;
 		this.scoreEl = document.querySelector('.score') as HTMLHeadingElement;
 
 		this.snake = new Snake(this.ctx, this.GRID_W, this.GRID_H, this.end, this.play);
@@ -67,19 +70,20 @@ export default class App {
 		this.playing = false;
 		this.scoreEl.innerText = this.score.toString();
 		this.canvas.style.display = 'none';
-		this.menuEl.style.display = 'flex';
+		this.gameOverDiv.style.display = 'flex';
 	};
 
 	play = () => {
 		this.playing = true;
 		this.canvas.style.display = 'block';
-		this.menuEl.style.display = 'none';
+		this.gameOverDiv.style.display = 'none';
 	};
 
 	reset = () => {
 		this.playing = true;
 		this.canvas.style.display = 'block';
-		this.menuEl.style.display = 'none';
+		this.gameOverDiv.style.display = 'none';
+		this.startGameDiv.style.display = 'none';
 		this.snake = new Snake(this.ctx, this.GRID_W, this.GRID_H, this.end, this.play);
 		this.food = new Food(this.ctx, this.GRID_W, this.GRID_H);
 		this.score = 0;
