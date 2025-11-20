@@ -36,8 +36,7 @@ export default class App {
 		this.food = new Food(this.ctx, this.GRID_W, this.GRID_H);
 
 		document.addEventListener('keydown', e => {
-			console.log(e.key);
-			if (!this.playing && e.key === 'Enter') this.reset();
+			if (!this.playing && e.code === 'Space') this.reset();
 		});
 	}
 
