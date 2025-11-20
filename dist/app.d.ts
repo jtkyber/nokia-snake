@@ -3,6 +3,7 @@ import Snake from './snake';
 export default class App {
     canvas: HTMLCanvasElement;
     ctx: CanvasRenderingContext2D;
+    phoneEl: HTMLDivElement;
     displayEl: HTMLDivElement;
     gameOverDiv: HTMLDivElement;
     startGameDiv: HTMLDivElement;

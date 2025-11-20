@@ -4,6 +4,7 @@ import Snake from './snake';
 export default class App {
 	canvas: HTMLCanvasElement;
 	ctx: CanvasRenderingContext2D;
+	phoneEl: HTMLDivElement;
 	displayEl: HTMLDivElement;
 	gameOverDiv: HTMLDivElement;
 	startGameDiv: HTMLDivElement;
@@ -30,6 +31,7 @@ export default class App {
 	constructor(canvas: HTMLCanvasElement) {
 		this.canvas = canvas;
 		this.ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
+		this.phoneEl = document.querySelector('.phone') as HTMLDivElement;
 		this.displayEl = document.querySelector('.display') as HTMLDivElement;
 		this.gameOverDiv = document.querySelector('.game_over_screen') as HTMLDivElement;
 		this.startGameDiv = document.querySelector('.start_game_screen') as HTMLDivElement;
@@ -50,6 +52,8 @@ export default class App {
 
 		this.cell_w = width / this.GRID_W;
 		this.cell_h = height / this.GRID_H;
+
+		this.phoneEl.style.display = 'block';
 	}
 
 	resize() {

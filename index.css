@@ -31,7 +31,6 @@ body {
 		justify-content: center;
 		align-items: center;
 		padding: 4rem;
-		background-color: rgb(211, 201, 185);
 
 		img {
 			position: absolute;
@@ -56,6 +55,7 @@ body {
 		.phone {
 			position: relative;
 			height: 100%;
+			display: none;
 
 			.display_svg {
 				position: absolute;
