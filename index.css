@@ -30,15 +30,7 @@ body {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: 4rem;
-
-		img {
-			position: absolute;
-			opacity: 0;
-			padding: 2rem;
-			height: 100%;
-			z-index: 1;
-		}
+		padding: 2rem;
 
 		.bg {
 			position: absolute;
@@ -55,7 +47,7 @@ body {
 		.phone {
 			position: relative;
 			height: 100%;
-			display: none;
+			visibility: hidden;
 
 			.display_svg {
 				position: absolute;

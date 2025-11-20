@@ -53,7 +53,7 @@ export default class App {
 		this.cell_w = width / this.GRID_W;
 		this.cell_h = height / this.GRID_H;
 
-		this.phoneEl.style.display = 'block';
+		this.phoneEl.style.visibility = 'visible';
 	}
 
 	resize() {
