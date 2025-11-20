@@ -45,12 +45,12 @@ body {
 			position: absolute;
 			width: 100%;
 			height: 100%;
-			/* background-image: url('./public/90sBackground.jpg');
+			background-image: url('./public/90sBackground.jpg');
 			background-repeat: no-repeat;
 			background-position: center;
 			background-size: cover;
-			filter: blur(5px) brightness(90%);
-			box-shadow: 0px 0px 5rem 2rem black; */
+			filter: blur(6px) brightness(80%);
+			box-shadow: 0px 0px 5rem 2rem black;
 		}
 
 		.phone {

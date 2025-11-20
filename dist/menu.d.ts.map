@@ -1,0 +1,1 @@
+{"version":3,"file":"menu.d.ts","sourceRoot":"","sources":["../src/menu.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,OAAO,OAAO,IAAI;IACxB,GAAG,EAAE,wBAAwB,CAAC;gBAElB,GAAG,EAAE,wBAAwB;IAIzC,IAAI,CAAC,MAAM,EAAE,MAAM,EAAE,MAAM,EAAE,MAAM;CAGnC"}
