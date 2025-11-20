@@ -4,12 +4,14 @@ export default class App {
     canvas: HTMLCanvasElement;
     ctx: CanvasRenderingContext2D;
     displayEl: HTMLDivElement;
-    menuEl: HTMLDivElement;
+    gameOverDiv: HTMLDivElement;
+    startGameDiv: HTMLDivElement;
     scoreEl: HTMLHeadingElement;
     MAX_FPS: number;
     FRAME_INTERVAL: number;
     then: number;
     accumulator: number;
+    hadFirstStart: boolean;
     playing: boolean;
     GRID_W: number;
     GRID_H: number;
